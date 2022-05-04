@@ -12,11 +12,8 @@ junior_subjects = ['English Language', 'Mathematics', 'Civic Education', \
                    'Physical Health Education', 'Agricultural Science', \
                    'Technical Drawing', 'Creative and Cultural Arts']
 
-st.title('Student\'s Result Visualization Dashboard')
-st.write('Use the menu on the left to enter and vizualize your result (click on > if closed).')
-expander = st.sidebar.beta_expander('About')
-expander.write("This web app allows secondary school students to visualize their result, providing an easy to understand chart.")
-st.sidebar.subheader('Select Section')
+st.title('Results Dashboard')
+st.write('Use the menu on the left to enter your results and identify your weak subjects (click on > if closed).')
 section = st.sidebar.radio('', ['Junior Secondary', 'Senior Secondary'])
 if section == 'Junior Secondary':
     with st.sidebar.form(key ='form'):
