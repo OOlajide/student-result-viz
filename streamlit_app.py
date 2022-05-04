@@ -7,10 +7,10 @@ senior_subjects = ['English Language', 'Mathematics', 'Physics', 'Chemistry', \
                    'Economics', 'Literature In English', 'Technical Drawing', \
                    'Accounting', 'Data Processing', 'Further Mathematics']
 junior_subjects = ['English Language', 'Mathematics', 'Civic Education', \
-                   'Computer Studies', 'Basic Science', 'Business Studies' \
+                   'Computer Studies', 'Basic Science', 'Business Studies', \
                    'Home Economics', 'Basic Technology', \
                    'Physical Health Education', 'Agricultural Science', \
-                   'Technical Drawing', 'Creative and Cultural Arts']
+                   'Music', 'Creative and Cultural Arts']
 
 st.title('Results Dashboard')
 st.write('Use the menu on the left to enter your results and identify your weak subjects (click on > if closed).')
@@ -22,7 +22,7 @@ if section == 'Junior Secondary':
         subjects = st.multiselect('Select Subjects', junior_subjects)
         st.subheader('Enter score for each selected subject')
         scores = st.text_input('In the order they were selected, enter score for each subject separated by \",\" e.g 10,20,50')
-        submit = st.form_submit_button('Submit and Visualize')
+        submit = st.form_submit_button('Submit')
 elif section == 'Senior Secondary':
     with st.sidebar.form(key ='form'):
         name = st.text_input('Student Name')
